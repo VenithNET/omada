@@ -83,6 +83,7 @@ body {
 	word-break: break-word;
 	overflow-wrap: break-word;
 	background: var(--nc-bg-1);
+	backdrop-filter: blur(4px); /* Add a subtle blur to the body */
 
 	/* Main body text */
 	color: var(--nc-tx-2);
@@ -100,6 +101,7 @@ h1,h2,h3,h4,h5,h6 {
 	line-height: 1;
 	color: var(--nc-tx-1);
 	padding-top: .875rem;
+	animation: fadeIn 1s ease; /* Add a 1-second fade-in animation */
 }
 
 h1,
@@ -143,10 +145,12 @@ h6 {
 
 a {
 	color: var(--nc-lk-1);
+	transition: color 0.3s ease;
 }
 
 a:hover {
 	color: var(--nc-lk-2);
+	text-decoration: underline; /* Underline on hover */
 }
 
 abbr:hover {
@@ -207,10 +211,13 @@ header > *:last-child {
 }
 
 a button,
-button,
+button, 
 input[type="submit"],
 input[type="reset"],
-input[type="button"] {
+input[type="button"],
+textarea,
+select,
+input {
 	font-size: 1rem;
 	display: inline-block;
 	padding: 6px 12px;
@@ -224,6 +231,7 @@ input[type="button"] {
 	box-sizing: border-box;
 	cursor: pointer;
 	color: var(--nc-lk-tx);
+ 	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 a button[disabled],
@@ -412,6 +420,7 @@ mark {
 	padding: 3px 6px;
 	background: var(--nc-ac-1);
 	color: var(--nc-ac-tx);
+    animation: pulse 2s infinite;
 }
 
 textarea,
