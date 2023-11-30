@@ -2,7 +2,7 @@
 ## Please, never use ../ or any relative file paths ever again. I beg of you.
 
 
-`../` - Do not use, this will result in general breakge and headaches.
+`../` - Do not use, this will result in general breakge and headaches. <br>
 `index.html` - Unneeded, bloat, those 2 bytes are too much. Bad. do "/" instead.
 
 Good:
